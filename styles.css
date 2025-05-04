@@ -42,10 +42,30 @@ select {
   font-size: 1.5rem;
 }
 
+@media(max-width:1500px) {
+  .content {
+    font-size: 1.2rem;
+  }
+}
+
+@media(max-width:700px) {
+  .content {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+}
+
 .title {
   font-size: 4rem;
   line-height: 4rem;
   color: white;
+}
+
+@media(max-width:700px) {
+  .title {
+    font-size: 2.5rem;
+    line-height: 2.75rem;
+  }
 }
 
 .section-title {
@@ -59,6 +79,14 @@ select {
     line-height: 2.75rem;
   }
 }
+
+@media(max-width:700px) {
+  .section-title {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+}
+
 
 /* Front Page */
 
@@ -76,10 +104,24 @@ header {
   height: auto;
 }
 
+.header-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
 .hero-content {
   font-size: 2rem;
   font-weight: 600;
   color: white;
+}
+
+@media(max-width:700px) {
+  .hero-content {
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+  }
 }
 
 
@@ -115,10 +157,67 @@ section.hero-opener {
   align-items: center;
 }
 
+.section-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
+.row {
+  display: flex;
+  width: auto;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  gap: 4rem;
+}
+
+@media(max-width: 1455px) {
+  .row {
+    flex-direction: column;
+  }
+}
+
+@media(max-width: 700px) {
+  .row {
+    gap: 2rem;
+  }
+}
+
+.row-image {
+  width: 100%;
+  flex: 1;
+  align-items: stretch;
+}
+
+.row-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* crop to fit full area without distortion */
+  display: block;
+}
+
+.row-text {
+  background-color: #27C4EA; /* optional */
+  padding: 2rem;
+  box-sizing: border-box;
+flex: 1;
+
+}
+
 .section-container {
   display: flex;
   flex-direction: row;
   gap: 8rem;
+}
+
+.calendar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 @media(max-width:1320px) {
@@ -150,8 +249,9 @@ section.hero-opener {
 
 .banner-image-holder {
   display: flex;
+  flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
   height: 15rem;
   background-image: url(/images/banner.webp);
@@ -196,7 +296,7 @@ section.hero-opener {
 
 .section-closer {
   margin: 0 auto;
-  max-width: 70ch;
+
 }
 
 /* Buttons */
@@ -212,6 +312,12 @@ section.hero-opener {
   transition: background-color 0.3s ease;
   width: 17rem;
   text-align: center;
+}
+
+@media(max-width:1500px) {
+.call-button {
+  font-size: 1.5rem;
+}
 }
 
 .call-button:hover {
@@ -232,7 +338,7 @@ section.hero-opener {
 
 @media(max-width:1500px) {
   .screen-padding {
-    padding: 2rem 5%;
+    padding: 2rem 15%;
   }
 }
 
